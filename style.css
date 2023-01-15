@@ -25,9 +25,12 @@ header {
 header h1 {
     margin: 20px;
     margin-top: 60px;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
+}
+header p {
+    font-size: 20px;
 }
 
 .desc {
@@ -36,7 +39,7 @@ header h1 {
 }
 
 nav a {
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     transition: color .2s linear;
 }
@@ -74,6 +77,9 @@ main {
     padding: 20px;
     min-height: 100%;
     margin: 0 auto -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main h2 {
@@ -82,6 +88,7 @@ main h2 {
     margin-left: 2%;
     padding-left: 10px;
     color: white;
+    margin-bottom: 10px;
 }
 
 section  {
@@ -90,7 +97,7 @@ section  {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 40px auto;
+    margin: 40px 0;
 }
 
 section div {
@@ -102,15 +109,44 @@ section div {
 section p {
     margin-left: 2%;
     padding-left: 10px;
-    font-size: 24px;
+    font-size: 32px;
 }
  section canvas {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     /* border-radius: 1rem;
-    border: white 1px solid; */
+    border: white 1px solid;
+    margin-right: auto; */
 } 
+
+@media all  and ( max-width: 900px ) {
+    section {
+        align-items: center;
+        width: 85%;
+    }
+    section div {
+        align-items: center;
+        margin-left: 0;
+    }
+    section a {
+        margin: auto;
+    }
+    section h2 {
+        text-align: center;
+        margin-left: 0;
+        padding-left: 0;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    section p {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    section canvas {
+        margin-left: 0;
+    }
+}
 
 
 footer,
