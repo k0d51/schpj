@@ -112,12 +112,12 @@ section p {
     font-size: 32px;
 }
  section canvas {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
     /* border-radius: 1rem;
-    border: white 1px solid;
-    margin-right: auto; */
+    border: white 1px solid; */
+    margin-right: auto;
 } 
 
 @media all  and ( max-width: 900px ) {

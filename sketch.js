@@ -1,5 +1,6 @@
 let gh = new Zdog.Illustration({
     element: '.gh',
+    scale: 0.7,
 });
 let tire = new Zdog.Illustration({
     element: '.tire',
@@ -20,12 +21,37 @@ let travel = new Zdog.Illustration({
     element: '.travel',
 });
 
-new Zdog.Ellipse({
+let rect = new Zdog.Rect({
     addTo: gh,
-    diameter: 50,
+    width: 120,
+    height: 80,
     stroke: 15,
-    color:'#ffbe0b',
+    color: '#ffbe0b',
+    translate: {y: 20},
+    rotate: { x: Zdog.TAU/4 }
 });
+let hemi = new Zdog.Ellipse({
+    addTo: rect,
+    diameter: 80,
+    stroke: 15,
+    quarters: 2,
+    color:'#ffbe0b',
+    translate: { x: 60 },
+    rotate: { y: Zdog.TAU/4 },
+});
+hemi.copy ({
+    translate: { x: -60 },
+});
+new Zdog.Shape({
+    addTo: gh,
+    path: [
+      { x: -60, y: -20 },
+      { x:  60, y: -20 },
+    ],
+    stroke: 15,
+    color: '#ffbe0b',
+  });
+
 new Zdog.Ellipse({
     addTo: tire,
     diameter: 50,
