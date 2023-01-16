@@ -1,7 +1,7 @@
-let gh = new Zdog.Illustration({
-    element: '.gh',
-    scale: 0.7,
-});
+let gh = new Zdog.Illustration({ //
+    element: '.gh',  //
+    scale: 0.6,  //
+}); //
 let tire = new Zdog.Illustration({
     element: '.tire',
 });
@@ -21,15 +21,16 @@ let travel = new Zdog.Illustration({
     element: '.travel',
 });
 
-let rect = new Zdog.Rect({
-    addTo: gh,
-    width: 120,
-    height: 80,
-    stroke: 15,
-    color: '#ffbe0b',
-    translate: {y: 20},
-    rotate: { x: Zdog.TAU/4 }
-});
+
+let rect = new Zdog.Rect({  //
+    addTo: gh, //
+    width: 120, //
+    height: 80, 
+    stroke: 15, //
+    color: '#ffbe0b', //
+    translate: {y: 20}, //
+    rotate: { x: Zdog.TAU/4 } //
+}); //
 let hemi = new Zdog.Ellipse({
     addTo: rect,
     diameter: 80,
@@ -52,12 +53,33 @@ new Zdog.Shape({
     color: '#ffbe0b',
   });
 
-new Zdog.Ellipse({
+
+let tirebase = new Zdog.Ellipse({
     addTo: tire,
     diameter: 50,
     stroke: 15,
     color:'#ffbe0b',
 });
+let cross1 = new Zdog.Shape({
+    addTo: tirebase,
+    path: [
+      { x: -10, y: -10 },
+      { x: 10, y: 10 },
+    ],
+    stroke: 10,
+    color: '#fb5607',
+  });
+  
+  let cross2 = new Zdog.Shape({
+    addTo: tirebase,
+    path: [
+      { x: -10, y: 10 },
+      { x: 10, y: -10 },
+    ],
+    stroke: 10,
+    color: '#fb5607',
+})
+
 new Zdog.Ellipse({
     addTo: flat,
     diameter: 50,
@@ -89,22 +111,22 @@ new Zdog.Ellipse({
     color:'#ffbe0b',
 });
 
-function animate() {
-    gh.rotate.y += 0.04;
-    tire.rotate.y += 0.03;
+function animate() { //
+    gh.rotate.y += 0.04; //
+    tire.rotate.z += 0.03;
     flat.rotate.y += 0.02;
     cs.rotate.y += 0.01;
     paper.rotate.y += 0.02;
     oven.rotate.y += 0.03;
     travel.rotate.y += 0.04;
-    gh.updateRenderGraph();
+    gh.updateRenderGraph(); //
     tire.updateRenderGraph();
     flat.updateRenderGraph();
     cs.updateRenderGraph();
     paper.updateRenderGraph();
     oven.updateRenderGraph();
     travel.updateRenderGraph();
-    requestAnimationFrame( animate );
+    requestAnimationFrame( animate ); //
 }
 
-animate();
+animate(); //
