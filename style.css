@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Sofia+Sans:wght@700&display=swap');
+
+@font-face {
+    font-family: Sofia Sans;
+    src: url(SofiaSans-VariableFont_wght.ttf);
+  }
+
 html, body {
     height: 100%;
     margin: 0;
@@ -6,7 +11,8 @@ html, body {
 
 body {
     background-color: #150050;
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: Sofia Sans;
+    font-weight: 700;
 }
 
 p, h1{
@@ -61,7 +67,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Sofia Sans', sans-serif;
 }
 nav ul {
     list-style: none;
@@ -98,25 +103,25 @@ section  {
     flex-direction: column;
     width: 50%;
     margin: 40px 0;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 section div {
     display: flex;
-    margin-left: 2%;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 section p {
-    margin-left: 2%;
-    padding-left: 10px;
+
     font-size: 32px;
 }
  section canvas {
     width: 100px;
     height: 100px;
     margin: 10px;
-    /* border-radius: 1rem;
-    border: white 1px solid; */
+     border-radius: 1rem;
+    border: white 1px solid; 
     margin-right: auto;
 } 
 
@@ -169,7 +174,7 @@ footer button {
     border: none;
     border-radius: .5rem;
     margin: auto;
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: Sofia Sans;
     font-size: 15px;
     transition: background-color 0.2s linear;
 }
