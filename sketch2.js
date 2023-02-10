@@ -12,15 +12,7 @@ let func = new Zdog.Illustration({
 let prog = new Zdog.Illustration({
     element: '.progressions',
 });
-let angle = new Zdog.Illustration({
-    element: '.angle',
-});
-let circ = new Zdog.Illustration({
-    element: '.circles',
-});
-let area = new Zdog.Illustration({
-    element: '.area',
-});
+
 
 
 let SofiaSans = new Zdog.Font({
@@ -48,5 +40,27 @@ new Zdog.Text({
     color: '#ffbe0b',
     fill: true,
     translate: { y: 18},
+});
+
+new Zdog.Text({
+    addTo: stats,
+    font: SofiaSans,
+    value: 'P(A)',
+    fontSize: 64,
+    textAlign: 'center',
+    color: '#ffbe0b',
+    fill: true,
+    translate: { y: 18},
+});
+
+new Zdog.Text({
+    addTo: prog,
+    font: SofiaSans,
+    value: 'a₂=a₁+b',
+    fontSize: 28,
+    textAlign: 'center',
+    color: '#ffbe0b',
+    fill: true,
+    translate: { y: 10},
 });
 

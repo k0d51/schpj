@@ -4,24 +4,38 @@ let gh = new Zdog.Illustration({ //
 }); //
 let tire = new Zdog.Illustration({
     element: '.tire',
+    scale: 1.5,
 });
 let flat = new Zdog.Illustration({
     element: '.flat',
+    scale: 1.2,
 });
 let cs = new Zdog.Illustration({
     element: '.cs',
+    scale: 1.2,
 });
 let paper = new Zdog.Illustration({
     element: '.paper',
-    scale: .3,
+    scale: .5,
 });
 let oven = new Zdog.Illustration({
     element: '.oven',
+    scale: 1.2,
 });
 let travel = new Zdog.Illustration({
     element: '.travel',
     scale: .5,
 });
+let angle = new Zdog.Illustration({
+    element: '.angle',
+});
+let circ = new Zdog.Illustration({
+    element: '.circles',
+});
+let area = new Zdog.Illustration({
+    element: '.area',
+});
+
 
 
 let rect = new Zdog.Rect({  //
@@ -225,6 +239,45 @@ new Zdog.Ellipse({
     translate: {x: 60, y: -50},
 });
 
+new Zdog.Shape({
+    addTo: angle,
+    path: [
+      { x:   0, y: -40 },
+      { x:  -40, y:  40 },
+      { x: 40, y:  40 },  
+    ],
+    closed: false,
+    stroke: 10,
+    color: '#ffbe0b'
+  });
+
+
+  new Zdog.Ellipse({
+    addTo: circ,
+    diameter: 80,
+    stroke: 10,
+    color: '#ffbe0b',
+  });
+
+  new Zdog.Ellipse({
+    addTo: area,
+    diameter: 80,
+    stroke: 10,
+    fill: true,
+    color: '#ffbe0b',
+  });
+  new Zdog.Shape({
+    addTo: area,
+    path: [
+      { x:   0, y: 0 },
+      { x:  40, y: 0 },
+    ],
+    closed: false,
+    stroke: 10,
+    color: '#fb5607'
+  });
+
+
 
 function animate() { //
     gh.rotate.y += 0.01; //
@@ -238,6 +291,9 @@ function animate() { //
     paper.updateRenderGraph();
     oven.updateRenderGraph();
     travel.updateRenderGraph();
+    angle.updateRenderGraph();
+    circ.updateRenderGraph();
+    area.updateRenderGraph();
     requestAnimationFrame( animate ); //
 }
 
