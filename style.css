@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: Sofia Sans;
     src: url(SofiaSans-VariableFont_wght.ttf);
@@ -61,12 +60,8 @@ nav a:hover {
 }
 nav {
     margin: auto;
-    width: 250px;
-    height: 200px;
+
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 nav ul {
     list-style: none;
@@ -77,6 +72,7 @@ nav li {
     margin: 1rem;
     padding: .35rem;
 }
+
 
 main {
     padding: 20px;
