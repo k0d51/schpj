@@ -58,6 +58,10 @@ nav a:hover {
     color: #8338ec;
     transition: color .2s linear;
 }
+
+.nav2 {
+    display:flex;
+}
 nav {
     margin: auto;
 
@@ -121,6 +125,10 @@ section p {
     margin-right: auto;
 } 
 
+section p {
+    margin:15px;
+}
+
 @media all  and ( max-width: 900px ) {
     section {
         align-items: center;
@@ -148,6 +156,51 @@ section p {
         margin-left: 0;
     }
 }
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.split img {
+    height: 1350px;
+    width: 960px;
+}
+
+.left {
+    left: 0;
+    margin: 0;
+}
+.right {
+    margin-bottom: 100px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.centered {
+
+    text-align: center;
+}
+ button {
+    width: 300px;
+    height: 40px;
+    background-color: #8338ec; 
+    border: none;
+    border-radius: .5rem;
+    margin: auto;
+    font-family: Sofia Sans;
+    font-size: 15px;
+    transition: background-color 0.2s linear;
+}
+
+button:hover {
+    background-color: #FB2576;
+    transition: background-color 0.2s linear;
+}
 
 
 footer,
@@ -162,20 +215,4 @@ footer {
     background-color: #000;
     flex-direction: column;
     text-align: center;
-}
-footer button {
-    width: 300px;
-    height: 40px;
-    background-color: #8338ec; 
-    border: none;
-    border-radius: .5rem;
-    margin: auto;
-    font-family: Sofia Sans;
-    font-size: 15px;
-    transition: background-color 0.2s linear;
-}
-
-footer button:hover {
-    background-color: #FB2576;
-    transition: background-color 0.2s linear;
 }
